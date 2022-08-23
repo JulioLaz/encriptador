@@ -21,8 +21,6 @@ if (   inputTexto.style.color != "red"){
    inputTexto.style.color = "black";
    alert("Este es un texto encriptado: Será desencritado ahora!!!");
    return desencriptar(inputTexto.value);
-
-
 }
 }
 function desencriptar(stringDesencriptada){

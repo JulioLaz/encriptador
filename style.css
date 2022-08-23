@@ -2,7 +2,14 @@ main{
    display: flex;
    margin-top:  50px;
    margin-left: 30px;
+   background: #444444;
+   color: #999999;
+   text-shadow:1px 1px 3px #000;
+   justify-content: center;
 }
 .encriptado{
    margin-left: 2rem;
+}
+section{
+   margin: 1.5rem;
 }
