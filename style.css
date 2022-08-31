@@ -13,3 +13,11 @@ main{
 section{
    margin: 1.5rem;
 }
+textarea {
+   resize: vertical;
+   width: 25vw;
+   height: 45vh;
+   border-radius: 1rem;
+   padding: 1rem;
+   /* resize: none; */
+}
