@@ -47,8 +47,13 @@ function btnCopiar(){
    const textoCopiado= copiar(mensaje.value);
    inputTexto.value = textoCopiado;
    inputTexto.style.color = "red";
-   // mensaje.value="";
    
+   mensaje.Select;
+   navigator.clipboard.writeText(mensaje.value);
+   alert("Texto copiado: "+ mensaje.value);
+   console.log("copiado");
+   mensaje.value="";
+
 }
 function copiar(stringCopiado){
    stringCopiado=mensaje.value;
@@ -60,11 +65,3 @@ function btnBorrar(){
    return mensaje.value="", inputTexto.value = "";
 
 }
-
-// function btnCopiar(){
-//    mensaje.Select;
-//    navigator.clipboard.writeText(mensaje.value);
-//    alert("Texto copiado: "+ mensaje.value);
-//    console.log("copiado");
-//    mensaje.value="";
-// }
