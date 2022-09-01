@@ -14,25 +14,32 @@
    <main>
 
       <section>
-         <label for="input-texto"><h2>Texto normal</h2></label>
-         <textarea id="input-texto" class="input-texto" cols="30" rows="10" placeholder="..."></textarea>
-         <div class="botones">
-            <button class="encriptar" onclick="btnEncriptar()">encriptar</button>
-            <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-         </div>
+         <label for="input-texto"><h2>Texto original</h2></label>
+         <textarea id="input-texto" class="input-texto textarea-resize" cols="30" rows="10" placeholder="ingresar texto..."></textarea>
       </section>
-
+      
       <section class="encriptado">
          <label for="mensaje"><h2>Texto encriptado</h2></label>
-         <textarea id="mensaje" class="mensaje" cols="30" rows="10" placeholder="..."></textarea>
-         <div class="">
-            <button class="copiar" onclick="btnCopiar()">Copiar</button>
-            <button class="borrar" onclick="btnBorrar()">Borrar</button>
+         <textarea id="mensaje" class="mensaje textarea-resize" cols="30" rows="10" placeholder="..."></textarea>
+      </section> 
+      
+      <section>
+         <div class="botones">
+            <button class="encriptar button" onclick="btnEncriptar()">Encriptar</button>
+            <button class="desencriptar button" onclick="btnDesencriptar()">Desencriptar</button>
+            <button class="copiar button" onclick="btnCopiar()">Copiar</button>
+            <button class="borrar button" onclick="btnBorrar()">Borrar</button>
          </div>
-         
+      </section>
+      
+      <section class="">
+         <textarea class="borrador" cols="30" rows="5" placeholder="texto copiado"></textarea>
       </section> 
 
    </main>
+   <footer>
+      
+   </footer>
    <script src="script.js"></script>
 </body>
 </html>
