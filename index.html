@@ -11,26 +11,27 @@
 <body>
    <header>
       <h1>ENCRIPTADOR</h1>
-      <p>⛔ Sólo letras sin acentos y sin caracteres especiales</p>
+      <p>⛔ Ingresar letras sin acentos y sin caracteres especiales</p>
    </header>
    <main>
 
       <section class="texto-original ">
-         <label  for="input-texto"><h2 class="color-input">Texto original</h2></label>
-         <textarea id="input-texto" class="input-texto textarea-io textarea-i" cols="30" rows="10" placeholder="ingresar texto..."></textarea>
+         <label  for="input-texto"><h2 class="color-io">Texto Original</h2></label>
+         <textarea id="input-texto" class="input-texto textarea-io textarea-i" cols="30" rows="10" placeholder="ingresar texto..." onclick="textareaNormal()"></textarea>
       </section>
       
       <section class="encriptado">
-         <label for="mensaje"><h2 class="color-output">Texto encriptado</h2></label>
-         <textarea id="mensaje" class="mensaje textarea-io textarea-o" cols="30" rows="10" placeholder="encriptado..."></textarea>
+         <label for="mensaje"><h2 class="color-io">Texto Encriptado</h2></label>
+         <textarea id="mensaje" class="mensaje textarea-io textarea-o" cols="30" rows="10" placeholder="texto encriptado..."></textarea>
       </section> 
       
       <section>
          <div class="botones">
             <button class="encriptar button color-input" onclick="btnEncriptar()">Encriptar  ==> </button>
-            <button class="borrar button color-input" onclick="btnBorrar()">Borrar </button>
+            <button class="copiar button color-output" onclick="btnCopiarOriginal()">Copiar Original</button>
+            <button class="borrar button color-input" onclick="btnBorrar()">Borrar tableros</button>
+            <button class="copiar button color-output" onclick="btnCopiarEncriptado()">Copiar Encriptado</button>
             <button class="desencriptar button color-output" onclick="btnDesencriptar()"><==  Desencriptar</button>
-            <button class="copiar button color-output" onclick="btnCopiar()">Copiar</button>
          </div>
       </section>
       
@@ -40,7 +41,7 @@
 
    </main>
    <footer>
-      
+      <p class="copyright">&copy Copyright - ENCRIPTADOR - 2022</p>
    </footer>
    <script src="script.js"></script>
 </body>
