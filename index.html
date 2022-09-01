@@ -5,6 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="reset.css">
    <title>Encriptador</title>
 </head>
 <body>
@@ -13,27 +14,27 @@
    </header>
    <main>
 
-      <section>
-         <label for="input-texto"><h2>Texto original</h2></label>
-         <textarea id="input-texto" class="input-texto textarea-resize" cols="30" rows="10" placeholder="ingresar texto..."></textarea>
+      <section class="texto-original ">
+         <label  for="input-texto"><h2 class="color-input">Texto original</h2></label>
+         <textarea id="input-texto" class="input-texto textarea-io textarea-i" cols="30" rows="10" placeholder="ingresar texto..."></textarea>
       </section>
       
       <section class="encriptado">
-         <label for="mensaje"><h2>Texto encriptado</h2></label>
-         <textarea id="mensaje" class="mensaje textarea-resize" cols="30" rows="10" placeholder="..."></textarea>
+         <label for="mensaje"><h2 class="color-output">Texto encriptado</h2></label>
+         <textarea id="mensaje" class="mensaje textarea-io textarea-o" cols="30" rows="10" placeholder="encriptado..."></textarea>
       </section> 
       
       <section>
          <div class="botones">
-            <button class="encriptar button" onclick="btnEncriptar()">Encriptar</button>
-            <button class="desencriptar button" onclick="btnDesencriptar()">Desencriptar</button>
-            <button class="copiar button" onclick="btnCopiar()">Copiar</button>
-            <button class="borrar button" onclick="btnBorrar()">Borrar</button>
+            <button class="encriptar button color-input" onclick="btnEncriptar()">Encriptar  ==> </button>
+            <button class="borrar button color-input" onclick="btnBorrar()">Borrar </button>
+            <button class="desencriptar button color-output" onclick="btnDesencriptar()"><==  Desencriptar</button>
+            <button class="copiar button color-output" onclick="btnCopiar()">Copiar</button>
          </div>
       </section>
       
       <section class="">
-         <textarea class="borrador" cols="30" rows="5" placeholder="texto copiado"></textarea>
+         <textarea class="borrador" cols="30" rows="5" placeholder="texto copiado..."></textarea>
       </section> 
 
    </main>

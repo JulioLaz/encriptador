@@ -1,6 +1,6 @@
 const inputTexto=document.querySelector(".input-texto");
 const mensaje=document.querySelector(".mensaje");
-// const copiar=document.querySelector(".copiar");
+const borrador=document.querySelector(".borrador");
 
 function btnEncriptar(){
    const textoEncriptado = encriptar(inputTexto.value);
@@ -45,13 +45,12 @@ function btnDesencriptar(){
 
 function btnCopiar(){
    const textoCopiado= copiar(mensaje.value);
-   inputTexto.value = textoCopiado;
-   inputTexto.style.color = "red";
+   borrador.value = textoCopiado;
+   borrador.style.color = "red";
    
    mensaje.Select;
    navigator.clipboard.writeText(mensaje.value);
    alert("Texto copiado: "+ mensaje.value);
-   console.log("copiado");
    mensaje.value="";
 
 }
@@ -62,6 +61,6 @@ function copiar(stringCopiado){
 
 function btnBorrar(){
    inputTexto.style.color = "black";
-   return mensaje.value="", inputTexto.value = "";
+   return mensaje.value="", inputTexto.value = "", borrador.value="";
 
 }
