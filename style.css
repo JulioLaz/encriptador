@@ -88,7 +88,7 @@ label h2{
    background-color: rgba(124, 117, 117,.8);
    box-shadow: 2px 2px 3px #000;
    font-size:clamp(.3rem, calc(.3rem + 0.6vw), 1.2rem);
-   margin:2vw 0;
+   margin:1vw 0;
    color: white;
 }
 button.copiar, .borrar{
@@ -105,7 +105,7 @@ button.copiar, .borrar{
 .borrador{
    resize: vertical;
    width: 89.5vw;
-   height: 10vh;
+   height: 12vh;
    border-radius: .5rem;
    padding: .5rem;
    font-size: 1rem;
@@ -113,11 +113,10 @@ button.copiar, .borrar{
    border-bottom: 5vh;
    background: rgba(00, 00, 00,.6);
    border: 1px solid white;
-   margin-top: 1vh;
 }
 footer{
-   height: 5vh;
-   font-size: 0.7rem;
+   height: 7vh;
+   font-size: 0.9rem;
    color: white;
    background-color: rgb(29, 28, 28);
    display: flex;
