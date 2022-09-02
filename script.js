@@ -12,20 +12,23 @@ const mensaje=document.querySelector(".mensaje");
 const borrador=document.querySelector(".borrador");
 
 function entrada(){
-   borrador.value= "!!! TIENES QUE INGRESAR EL TEXTO ARRIBA 😁☝️ QUE DESEES ENCRIPTAR !!!";
+   borrador.value= "!!! 😁☝️ TIENES QUE INGRESAR EL TEXTO (ARRIBA) QUE DESEES ENCRIPTAR !!!";
    borrador.style.color = "white";
    document.getElementsByClassName("borrador")[0].style.background = "rgba(55,55,00,.7)";
+   borrador.style.textAlign = "center"
 }
 function salida(){
-   borrador.value= "!!! TIENES QUE INGRESAR EL TEXTO ARRIBA 😁☝️ QUE DESEES DESENCRIPTAR !!!";
+   borrador.value= "!!! TIENES QUE INGRESAR EL TEXTO (ARRIBA) QUE DESEES DESENCRIPTAR 😁☝️!!!";
    borrador.style.color = "white";
    document.getElementsByClassName("borrador")[0].style.background = "rgba(55,55,00,.7)";
+   borrador.style.textAlign = "center"
 }
 
 function textoVacio(){
-   borrador.value= "!!! TIENES QUE INGRESAR EL TEXTO ARRIBA 😁☝️ QUE DESEES COPIAR !!!";
+   borrador.value= "!!! TIENES QUE INGRESAR EL TEXTO (ARRIBA) 😁☝️ QUE DESEES COPIAR !!!";
    borrador.style.color = "white";
    document.getElementsByClassName("borrador")[0].style.background = "rgba(99,00,00,.7)";
+   borrador.style.textAlign = "center"
 }
 
 function btnEncriptar(){
@@ -126,6 +129,8 @@ function copiarOriginal(stringCopiado){
 function btnBorrar(){
    inputTexto.style.color = "black";
    document.getElementsByClassName("borrador")[0].style.background = "rgba(00, 00, 00,.6)";
+   borrador.style.textAlign = "left"
    return mensaje.value="", inputTexto.value = "", borrador.value="";
+
    
 }
