@@ -7,20 +7,31 @@ elInput.addEventListener('keyup', function(e) {
   }
 });
 
-
 const inputTexto=document.querySelector(".input-texto");
 const mensaje=document.querySelector(".mensaje");
 const borrador=document.querySelector(".borrador");
 
-function inicio(){
-   borrador.value= "!!! INGRESA UN TEXTO !!!";
+function entrada(){
+   borrador.value= "!!! TIENES QUE INGRESAR EL TEXTO ARRIBA 😁☝️ QUE DESEES ENCRIPTAR !!!";
+   borrador.style.color = "white";
+   document.getElementsByClassName("borrador")[0].style.background = "rgba(55,55,00,.7)";
+}
+function salida(){
+   borrador.value= "!!! TIENES QUE INGRESAR EL TEXTO ARRIBA 😁☝️ QUE DESEES DESENCRIPTAR !!!";
+   borrador.style.color = "white";
+   document.getElementsByClassName("borrador")[0].style.background = "rgba(55,55,00,.7)";
+}
+
+function textoVacio(){
+   borrador.value= "!!! TIENES QUE INGRESAR EL TEXTO ARRIBA 😁☝️ QUE DESEES COPIAR !!!";
    borrador.style.color = "white";
    document.getElementsByClassName("borrador")[0].style.background = "rgba(99,00,00,.7)";
 }
+
 function btnEncriptar(){
    
    if (inputTexto.value==""){
-      return inicio();
+      return entrada();
    }else{
       document.getElementsByClassName("borrador")[0].style.background = "rgba(00, 00, 00,.6)";
       borrador.value="";
@@ -56,12 +67,26 @@ return stringDesencriptada;
 }
 
 function btnDesencriptar(){
+
+   if (mensaje.value==""){
+      return salida();
+   }else{
+      document.getElementsByClassName("borrador")[0].style.background = "rgba(00, 00, 00,.6)";
+      borrador.value="";
+   }
+
    const textoDesencriptado= desencriptar(mensaje.value);
    inputTexto.value = textoDesencriptado;
    inputTexto.style.color = "white";
 }
 
 function btnCopiarEncriptado(){
+   if (mensaje.value==""){
+      return textoVacio();
+   }else{
+      document.getElementsByClassName("borrador")[0].style.background = "rgba(00, 00, 00,.6)";
+      borrador.value="";
+   }
    const textoCopiado= copiarEncriptado(mensaje.value);
    borrador.value = textoCopiado;
    
@@ -76,6 +101,13 @@ function copiarEncriptado(stringCopiado){
    return stringCopiado;
 }
 function btnCopiarOriginal(){
+   if (inputTexto.value==""){
+      return textoVacio();
+   }else{
+      document.getElementsByClassName("borrador")[0].style.background = "rgba(00, 00, 00,.6)";
+      borrador.value="";
+   }
+
    const textoCopiadoOriginal= copiarOriginal(inputTexto.value);
    borrador.value = textoCopiadoOriginal;
    borrador.style.color = "white";
@@ -83,7 +115,7 @@ function btnCopiarOriginal(){
    mensaje.Select;
    navigator.clipboard.writeText(inputTexto.value);
    document.getElementsByClassName("borrador")[0].style.background = "rgba(00, 00, 00,.6)";
-
+   
    alert("Texto Original copiado: "+ inputTexto.value);
 }
 function copiarOriginal(stringCopiado){
@@ -93,5 +125,7 @@ function copiarOriginal(stringCopiado){
 
 function btnBorrar(){
    inputTexto.style.color = "black";
+   document.getElementsByClassName("borrador")[0].style.background = "rgba(00, 00, 00,.6)";
    return mensaje.value="", inputTexto.value = "", borrador.value="";
+   
 }
