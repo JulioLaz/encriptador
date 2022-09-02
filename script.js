@@ -84,6 +84,7 @@ function btnDesencriptar(){
 }
 
 function btnCopiarEncriptado(){
+   
    if (mensaje.value==""){
       return textoVacio();
    }else{
@@ -104,6 +105,7 @@ function copiarEncriptado(stringCopiado){
    return stringCopiado;
 }
 function btnCopiarOriginal(){
+
    if (inputTexto.value==""){
       return textoVacio();
    }else{
