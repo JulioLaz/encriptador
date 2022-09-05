@@ -93,6 +93,7 @@ function btnCopiarEncriptado(){
    }
    const textoCopiado= copiarEncriptado(mensaje.value);
    borrador.value = textoCopiado;
+   borrador.style.color = "white";
    
    mensaje.Select;
    navigator.clipboard.writeText(mensaje.value);
